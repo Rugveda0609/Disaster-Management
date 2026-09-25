@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResqShield - Disaster Preparedness Portal</title>
+    <link rel="stylesheet" href="webstyle.css">
+    <link rel="JavaScript" href="webscript.js">
+</head>
+<script>
+function submitForm(event) {
+    event.preventDefault();
+    alert("Your disaster report has been submitted succesfully!");
+}
+</script>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">🚨 ResqShield</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#guidelines">Safety Guidelines</a></li>
+            <li><a href="#checklist">Survival Kit</a></li>
+            <li><a href="#helpline">Emergency Contacts</a></li>
+            <li><a href="#report">Report</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Be Prepared, Stay Safe</h1>
+            <p>Empowering communities with immediate disaster management guidelines, survival tracking, and swift resources.</p>
+            <a href="#guidelines" class="btn">Learn Guidelines</a>
+        </div>
+    </header>
+    <!-- DISASTER REPORT FORM -->
+<section class="section" id="report">
+    <h2>Report a Disaster</h2>
+    <p>Share important information so that help can reach those in need.</p>
+
+    <div class="form-box">
+
+        <form onsubmit="submitForm(event)">
+
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required>
+            <br><br>
+            <label>Location</label>
+            <input type="text" placeholder="Enter your location" required>
+            <br><br>
+            <label>Type of Disaster</label>
+            <select required>
+                <option value="">Select disaster</option>
+                <option>Flood</option>
+                <option>Earthquake</option>
+                <option>Cyclone</option>
+                <option>Fire</option>
+                <option>Landslide</option>
+                <option>Other</option>
+            </select>
+            <br><br>
+            <label>Describe the Situation</label>
+            <textarea placeholder="Enter details..." required></textarea>
+            <br><br>
+            <label>Contact Number</label>
+            <input type="tel" placeholder="Enter contact number" required>
+            <br><br>
+            <label>What type of help do you need?</label>
+            <select required>
+                <option value="">Select help needed</option>
+                <option>Medical Help</option>
+                <option>Food & Water</option>
+                <option>Rescue & Evacuation</option>
+                <option>Shelter</option>
+                <option>Transportation</option>
+                <option>Emergency Supplies</option>
+                <option>Other</option>
+                </select>
+                <label> Describe the Situation</label>
+                <textarea placeholder="Enter Details..." required></textarea>
+            <button type="submit">Submit Report</button>
+
+        </form>
+
+    </div>
+</section>
+
+
+    <!-- Safety Guidelines Grid -->
+    <section id="guidelines" class="section">
+        <h2>Disaster Safety Guidelines</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>🌋 Earthquakes</h3>
+                <p><strong>DROP, COVER, AND HOLD ON.</strong> Stay indoors under a heavy table until the shaking stops. Move away from glass panels and outer walls.</p>
+            </div>
+            <div class="card">
+                <h3>🌊 Floods</h3>
+                <p>Move immediately to higher ground. Avoid driving or walking through flooded pathways. Keep a close watch on official flash flood warnings.</p>
+            </div>
+            <div class="card">
+                <h3>🔥 Fires</h3>
+                <p>Stay low under smoke and crawl to safety. Test doors for heat before turning handles. Establish a family meeting spot safely outdoors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive JavaScript Checklist -->
+    <section id="checklist" class="section dark-bg">
+        <h2>Emergency Survival Kit Checklist</h2>
+        <p>Ensure your family pack is equipped. Check off items as you pack them:</p>
+        <div class="checklist-box">
+            <label class="check-item">
+                <input type="checkbox" class="kit-item"> 3-Day Water Supply (4 Litres per person per day)
+            </label>
+            <label class="check-item">
+                <input type="checkbox" class="kit-item"> Non-perishable, ready-to-eat packaged food
+            </label>
+            <label class="check-item">
+                <input type="checkbox" class="kit-item"> First-aid medical kit with personal medications
+            </label>
+            <label class="check-item">
+                <input type="checkbox" class="kit-item"> Flashlight with replacement batteries
+            </label>
+            <label class="check-item">
+                <input type="checkbox" class="kit-item"> Battery-operated or hand-crank portable radio
+            </label>
+            
+            <!-- JavaScript Dynamic Status Alert -->
+            <div id="status-message" class="status-alert">Kit status: Incomplete ⚠️</div>
+        </div>
+    </section>
+
+    <!-- Helpline Numbers Table -->
+    <section id="helpline" class="section">
+        <h2>National Emergency Numbers</h2>
+        <table class="emergency-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Emergency Number</th>
+                    <th>Availability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>National Emergency Response</td>
+                    <td><strong>112</strong></td>
+                    <td>24 / 7 Available</td>
+                </tr>
+                <tr>
+                    <td>Medical Ambulance</td>
+                    <td><strong>108</strong></td>
+                    <td>24 / 7 Available</td>
+                </tr>
+                <tr>
+                    <td>Fire Brigade</td>
+                    <td><strong>101</strong></td>
+                    <td>24 / 7 Available</td>
+                <tr>
+                </tr>
+                <td>DisasterManagement Service</td>
+                    <td><strong>1078</strong></td>
+                    <td>24 / 7 Available</td>
+                    <tr>
+                        <section class="hero" id="home">
+                         <div class="hero-content">
+                                <h1>Disaster <span>Management</span></h1>
+                                <p>
+                                    Stay informed, Stay prepared, Stay safe.<br>
+                                    Learn how to respond effectively during emergencies.
+                                </p>
+                                <a href="#report" class="btn">Report a Disaster</a>
+                            </div>
+                            </section>
