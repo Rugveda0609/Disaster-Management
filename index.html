@@ -46,13 +46,19 @@ function submitForm(event) {
         <form onsubmit="submitForm(event)">
 
             <label>Your Name</label>
-            <input type="text" placeholder="Enter your name" required minlength="2" maxlength="30" pattern="[A-Za-z]+" title="Name should contain only letterrs and spaces">
+            <input type="text" placeholder="Enter your name" required minlength="2" maxlength="30" pattern="[A-Za-z]+" title="Name should contain only letterrs and spaces"
+                oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')">
             <br><br>
             <label>Location</label>
-            <input type="text" placeholder="Enter your location" required minlength="2" maxlength="100">
+            <input type="text" placeholder="Enter your location" required minlength="2" maxlength="100"
+                oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')">
             <br><br>
             <label>Type of Disaster</label>
-            <select required>
+            <select required
+                oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')">
                 <option value="">Select disaster</option>
                 <option>Flood</option>
                 <option>Earthquake</option>
@@ -63,13 +69,19 @@ function submitForm(event) {
             </select>
             <br><br>
             <label>Describe the Situation</label>
-            <textarea placeholder="Enter details..." required minlength="2" maxlength="500"></textarea>
+            <textarea placeholder="Enter details..." required minlength="2" maxlength="500"
+                oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')"></textarea>
             <br><br>
             <label>Contact Number</label>
-            <input type="tel" placeholder="Enter contact number" required pattern="[0-9]{10}" maxlength="10" title="Please enter a valid 10-digit phone number">
+            <input type="tel" placeholder="Enter contact number" required pattern="[0-9]{10}" maxlength="10" title="Please enter a valid 10-digit phone number"
+                oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')">
             <br><br>
             <label>What type of help do you need?</label>
-            <select required>
+            <select required
+                oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')">
                 <option value="">Select help needed</option>
                 <option>Medical Help</option>
                 <option>Food & Water</option>
@@ -80,7 +92,9 @@ function submitForm(event) {
                 <option>Other</option>
                 </select>
                 <label> Describe the Situation</label>
-                <textarea placeholder="Enter Details..." required></textarea>
+                <textarea placeholder="Enter Details..." required
+                    oninvalid="this.setCustomValidity('Please fill the information')"
+            oninput="this.setCustomValidity('')"></textarea>
             <button type="submit">Submit Report</button>
 
         </form>
