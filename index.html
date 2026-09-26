@@ -35,7 +35,8 @@ function submitForm(event) {
             <a href="#guidelines" class="btn">Learn Guidelines</a>
         </div>
     </header>
-    <!-- DISASTER REPORT FORM -->
+    
+            <!-- DISASTER REPORT FORM -->
 <section class="section" id="report">
     <h2>Report a Disaster</h2>
     <p>Share important information so that help can reach those in need.</p>
@@ -45,10 +46,10 @@ function submitForm(event) {
         <form onsubmit="submitForm(event)">
 
             <label>Your Name</label>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your name" required minlength="2" maxlength="30" pattern="[A-Za-z]+" title="Name should contain only letterrs and spaces">
             <br><br>
             <label>Location</label>
-            <input type="text" placeholder="Enter your location" required>
+            <input type="text" placeholder="Enter your location" required minlength="2" maxlength="100">
             <br><br>
             <label>Type of Disaster</label>
             <select required>
@@ -62,10 +63,10 @@ function submitForm(event) {
             </select>
             <br><br>
             <label>Describe the Situation</label>
-            <textarea placeholder="Enter details..." required></textarea>
+            <textarea placeholder="Enter details..." required minlength="2" maxlength="500"></textarea>
             <br><br>
             <label>Contact Number</label>
-            <input type="tel" placeholder="Enter contact number" required>
+            <input type="tel" placeholder="Enter contact number" required pattern="[0-9]{10}" maxlength="10" title="Please enter a valid 10-digit phone number">
             <br><br>
             <label>What type of help do you need?</label>
             <select required>
@@ -107,31 +108,15 @@ function submitForm(event) {
         </div>
     </section>
 
-    <!-- Interactive JavaScript Checklist -->
-    <section id="checklist" class="section dark-bg">
-        <h2>Emergency Survival Kit Checklist</h2>
-        <p>Ensure your family pack is equipped. Check off items as you pack them:</p>
-        <div class="checklist-box">
-            <label class="check-item">
-                <input type="checkbox" class="kit-item"> 3-Day Water Supply (4 Litres per person per day)
-            </label>
-            <label class="check-item">
-                <input type="checkbox" class="kit-item"> Non-perishable, ready-to-eat packaged food
-            </label>
-            <label class="check-item">
-                <input type="checkbox" class="kit-item"> First-aid medical kit with personal medications
-            </label>
-            <label class="check-item">
-                <input type="checkbox" class="kit-item"> Flashlight with replacement batteries
-            </label>
-            <label class="check-item">
-                <input type="checkbox" class="kit-item"> Battery-operated or hand-crank portable radio
-            </label>
-            
-            <!-- JavaScript Dynamic Status Alert -->
-            <div id="status-message" class="status-alert">Kit status: Incomplete ⚠️</div>
-        </div>
-    </section>
+    <h2> Emergency Survival Kit</h2>
+    <h3> Ensure your Family Pack is Equipped.</h3>
+    <ul>
+        <li> day water supply</li>
+        <li> Non Perishable Food</li>
+        <li> First aid medical kit with personal medication</li>
+        <li> Flashlight with replacement batteries</li>
+        <li>Battery operated or hand crank portable radio</li>
+    </ul>
 
     <!-- Helpline Numbers Table -->
     <section id="helpline" class="section">
